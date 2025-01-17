@@ -1,0 +1,12 @@
+            <div
+              className="mt-[-80px] animate__animated animate__fadeInUp wow "
+              style={{ writingMode: "vertical-rl" }}
+              data-wow-delay="2s"
+            >
+              <img
+                src="/logo.png"
+                alt="Logo"
+                className="w-[8rem]"
+                data-wow-delay="1s"
+              />
+            </div>

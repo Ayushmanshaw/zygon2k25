@@ -1,0 +1,99 @@
+/* Container for hover animations */
+.hover-animation-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Two boxes per row on larger screens */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Make the grid responsive for mobile */
+  @media (max-width: 768px) {
+    .hover-animation-container {
+      grid-template-columns: 1fr; /* One box per row on smaller screens */
+    }
+  }
+  
+  /* Box styles */
+  .box {
+    width: 100%; /* Make the box responsive */
+    max-width: 450px; /* Set a max-width to prevent it from becoming too large */
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for box */
+  .box:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image container */
+  .image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+  }
+  
+  /* Image styles */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for image */
+  .image-container:hover img {
+    transform: scale(1.1);
+    filter: blur(2px);
+  }
+  
+  /* Text container */
+  .text-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Overlay effect */
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, rgba(58, 58, 58, 0.8), rgba(138, 138, 138, 0.5)); /* Gradient from bottom to top */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(100%); /* Keep it hidden initially */
+    transition: transform 0.3s ease, opacity 0.3s ease, height 0.3s ease;
+    height: 0; /* Initially set the height to 0 */
+    opacity: 0; /* Initially hidden */
+  }
+  
+  /* Hover effect for overlay */
+  .image-container:hover .overlay {
+    transform: translateY(0); /* Slide it up */
+    opacity: 1; /* Make it visible */
+    height: 150px; /* Set a specific height for the overlay */
+  }
+  
+  /* Hover effect for text */
+  .image-container:hover .text-container {
+    transform: translateY(-180px);
+  }
+  
