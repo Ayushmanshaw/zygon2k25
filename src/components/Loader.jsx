@@ -1,36 +1,17 @@
-// import React from "react";
-// import Lottie from "react-lottie";
-// import animationData from "../Animation.json"; // Adjust path accordingly
-
-// const Loader = () => {
-//   const defaultOptions = {
-//     loop: true,
-//     autoplay: true,
-//     animationData: animationData,
-//     rendererSettings: {
-//       preserveAspectRatio: "xMidYMid slice",
-//     },
-//   };
-
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         height: "100vh",
-//         backgroundColor: "#1a202c", // Equivalent to bg-gray-900
-//       }}
-//     >
-//       <Lottie options={defaultOptions} height={300} width={300} />
-//     </div>
-//   );
-// };
-
-// export default Loader;
 import React from "react";
+import Lottie from "react-lottie";
+import animationData from "../Animation1.json"; // Adjust the path accordingly
 
 const Loader = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <div
       style={{
@@ -39,8 +20,8 @@ const Loader = () => {
         alignItems: "center",
         height: "100vh",
         margin: 0,
-        backgroundColor: "rgba(0, 0, 0, 0.9)", // Dark background
-        fontFamily: "'Arial', sans-serif",
+        backgroundColor: "rgba(33, 33, 33, 0.9)", // Dark background
+        fontFamily: "'Pacifico', cursive", // Apply Pacifico font here
         overflow: "hidden",
       }}
     >
@@ -48,7 +29,22 @@ const Loader = () => {
         <span>Z</span>
         <span>Y</span>
         <span>G</span>
-        <span>O</span>
+        <span>
+          <div
+            style={{
+              marginTop: "30px",
+              width: "110px",
+              height: "110px",
+              marginLeft: "-23px",
+              marginRight: "-20px",
+              display: "inline-block",
+              position: "relative",
+              filter: "drop-shadow(10px 10px 20px rgba(255, 223, 89,0.9))", // Glow effect
+            }}
+          >
+            <Lottie options={defaultOptions} />
+          </div>
+        </span>
         <span>N</span>
       </div>
 
@@ -59,7 +55,7 @@ const Loader = () => {
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 90px;
+            font-size: 70px;
             font-weight: bold;
             color: #ffde59;
             text-transform: uppercase;
@@ -76,7 +72,6 @@ const Loader = () => {
           .loader span {
             position: relative;
             display: inline-block;
-            animation: fade-in 2s ease-in-out infinite;
           }
 
           .loader span:nth-child(1) {
@@ -95,36 +90,22 @@ const Loader = () => {
             animation-delay: 0.9s;
           }
 
-          @keyframes fade-in {
-            0% {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            50% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-            100% {
-              opacity: 0;
-            }
-          }
-
           @keyframes glow {
             0% {
               text-shadow: 
-                0 0 5px #ffde59, 
-                0 0 10px #ffcc00, 
-                0 0 20px #ffa31a, 
-                0 0 30px #ff751a, 
-                0 0 40px #ff4500;
+                0 0 40px #ffde59, 
+                0 0 8px #ffcc00, 
+                0 0 4px #ffa31a, 
+                0 0 2px #ff751a, 
+                0 0 1px #ff4500;
             }
             100% {
               text-shadow: 
-                0 0 10px #ffde59, 
-                0 0 20px #ffcc00, 
-                0 0 30px #ffa31a, 
-                0 0 40px #ff751a, 
-                0 0 50px #ff4500;
+                0 0 0px #ffde59, 
+                0 0 0px #ffcc00, 
+                0 0 0px #ffa31a, 
+                0 0 0px #ff751a, 
+                0 0 0px #ff4500;
             }
           }
         `}
@@ -132,5 +113,4 @@ const Loader = () => {
     </div>
   );
 };
-
 export default Loader;
