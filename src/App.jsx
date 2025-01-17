@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AnimationPage from "./components/AnimationPage";
-import LandingPage from "./components/Landingpage"; // Ensure the filename matches the casing
+import LandingPage from "./components/LandingPage"; // Ensure the filename matches the casing
 import Loader from "./components/Loader";
 
 function App() {
