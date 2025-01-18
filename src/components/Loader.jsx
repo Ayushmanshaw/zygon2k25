@@ -21,7 +21,7 @@ const Loader = () => {
         height: "100vh",
         margin: 0,
         backgroundColor: "rgba(33, 33, 33, 0.9)", // Dark background
-        fontFamily: "'Pacifico', cursive", // Apply Pacifico font here
+        //fontFamily: "'Pacifico', cursive", 
         overflow: "hidden",
       }}
     >
