@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../Animation1.json"; // Adjust the path accordingly
+import animationData from "../../public/loader/Animation1.json"; // Adjust the path accordingly
 
 const Loader = () => {
   const defaultOptions = {
@@ -20,8 +20,9 @@ const Loader = () => {
         alignItems: "center",
         height: "100vh",
         margin: 0,
-        backgroundColor: "rgba(33, 33, 33, 0.9)", // Dark background
-        //fontFamily: "'Pacifico', cursive", 
+        backgroundColor: "rgba(14, 14, 14, 0.96)", // Dark background
+        // backgroundImage: "url('/loader/giantwheel loader.webp')",
+        // fontFamily: "'Pacifico', cursive",
         overflow: "hidden",
       }}
     >
