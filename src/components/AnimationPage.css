@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* Container for hover animations */
+>>>>>>> 57dc53630f92319f3d90c11bb21c372aa5cf968a
 .hover-animation-container {
   background-color: #ffc100;
   display: grid;
@@ -13,13 +17,26 @@
     grid-template-columns: 1fr;
   }
 }
+<<<<<<< HEAD
+=======
+
+/* Card container with pseudo-element for blur effect */
+>>>>>>> 57dc53630f92319f3d90c11bb21c372aa5cf968a
 .card-container {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
+<<<<<<< HEAD
   padding: 10px; 
   z-index: 1;
 }
+=======
+  padding: 10px; /* Add padding around the card */
+  z-index: 1; /* Ensure content is above the background */
+}
+
+/* Apply blur effect to the padding area using the ::before pseudo-element */
+>>>>>>> 57dc53630f92319f3d90c11bb21c372aa5cf968a
 .card-container::before {
   content: '';
   position: absolute;
@@ -28,6 +45,7 @@
   right: -10px;
   bottom: -10px;
   /* background-image: url('./img/bg7.webp');  */
+<<<<<<< HEAD
   background-color: #c19614e4;
   background-size: cover;
   background-position: center;
@@ -35,6 +53,17 @@
   z-index: -1; 
   border-radius: 10px; 
 }
+=======
+  background-color: rgba(136, 93, 93, 0.892);
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Apply blur effect to the padding area */
+  z-index: -1; /* Place it behind the content */
+  border-radius: 10px; /* Ensure the blur effect matches the card's rounded corners */
+}
+
+/* Box styles */
+>>>>>>> 57dc53630f92319f3d90c11bb21c372aa5cf968a
 .box {
   width: 100%; 
   max-width: 450px; 
