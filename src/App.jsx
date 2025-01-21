@@ -4,7 +4,6 @@ import AnimationPage from "./components/AnimationPage";
 import LandingPage from "./components/LandingPage"; // Ensure the filename matches the casing
 import Loader from "./components/Loader";
 import Footer from "./components/Footer";
-
 function App() {
   const [screenLoading, setScreenLoading] = useState(true);
 
