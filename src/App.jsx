@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AnimationPage from "./components/AnimationPage";
 import LandingPage from "./components/LandingPage"; // Ensure the filename matches the casing
 import Loader from "./components/Loader";
+import Footer from "./components/Footer";
 
 function App() {
   const [screenLoading, setScreenLoading] = useState(true);
@@ -27,6 +28,7 @@ function App() {
               <>
                 <LandingPage />
                 <AnimationPage />
+                <Footer />
               </>
             )
           }
