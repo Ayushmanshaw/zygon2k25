@@ -1,23 +1,8 @@
-<<<<<<< HEAD
-=======
-// import { useState, useEffect, useRef } from "react";
-// import FOG from "vanta/dist/vanta.fog.min"; // Import the Vanta fog effect
-// import * as THREE from "three"; // Import THREE.js
->>>>>>> 57dc53630f92319f3d90c11bb21c372aa5cf968a
 import "animate.css";
 import { TiThMenu } from "react-icons/ti";
 import { FaInstagram } from "react-icons/fa";
 
 const Landingpage = () => {
-<<<<<<< HEAD
-=======
-  // const [vantaEffect, setVantaEffect] = useState(null);
-  // const myRef = useRef(null);
-
-
-
-
->>>>>>> 57dc53630f92319f3d90c11bb21c372aa5cf968a
   return (
     <div
   style={{
