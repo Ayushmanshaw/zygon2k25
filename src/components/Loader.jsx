@@ -1,12 +1,21 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../../public/loader/Animation1.json"; // Adjust the path accordingly
-
+import animationData1 from "../../public/loader/Animation_drop.json";
+import animationData2 from "../../public/loader/Animation1.json"; 
 const Loader = () => {
-  const defaultOptions = {
+  const defaultOptions1 = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: animationData1,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const defaultOptions2 = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData2,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -20,30 +29,51 @@ const Loader = () => {
         alignItems: "center",
         height: "100vh",
         margin: 0,
-        backgroundColor: "rgba(14, 14, 14, 0.96)", // Dark background
-        // backgroundImage: "url('/loader/giantwheel loader.webp')",
-        // fontFamily: "'Pacifico', cursive",
+        backgroundColor: "rgba(14, 14, 14, 0.96)",
         overflow: "hidden",
       }}
     >
       <div className="loader">
         <span>Z</span>
-        <span>Y</span>
-        <span>G</span>
+        <span>y</span>
+        <span>g</span>
         <span>
           <div
             style={{
-              marginTop: "30px",
-              width: "110px",
-              height: "110px",
-              marginLeft: "-23px",
-              marginRight: "-20px",
+              position: "relative", 
+              width: "90px",
+              height: "90px",
               display: "inline-block",
-              position: "relative",
-              filter: "drop-shadow(10px 10px 20px rgba(255, 223, 89,0.9))", // Glow effect
+              marginLeft: "-20px",
+              marginRight: "-10px",
+              marginTop:"30px"
             }}
           >
-            <Lottie options={defaultOptions} />
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                filter: "drop-shadow(10px 10px 20px rgba(255, 223, 89, 0.9))", // Glow effect
+              }}
+            >
+              <Lottie options={defaultOptions1} />
+            </div>
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                 marginTop:"1px",
+                filter: "drop-shadow(10px 10px 20px rgba(255, 223, 89, 0.9))", 
+              }}
+            >
+              <Lottie options={defaultOptions2} />
+            </div>
           </div>
         </span>
         <span>N</span>
@@ -51,6 +81,8 @@ const Loader = () => {
 
       <style>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap');
+
           .loader {
             position: relative;
             display: flex;
@@ -58,9 +90,9 @@ const Loader = () => {
             align-items: center;
             font-size: 70px;
             font-weight: bold;
-            color: #ffde59;
-            text-transform: uppercase;
+            color:#ffff;
             letter-spacing: 10px;
+            font-family: 'Cinzel Decorative', serif;
             text-shadow: 
               0 0 5px #ffde59, 
               0 0 10px #ffcc00, 
@@ -114,4 +146,5 @@ const Loader = () => {
     </div>
   );
 };
+
 export default Loader;

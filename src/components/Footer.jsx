@@ -14,17 +14,17 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="https://silicon.ac.in/" className="flex items-center">
               <img
-                src="./img/SU_logo_white-5.png"
-                className="h-8 me-3"
+                src="./siliconLogo.png"
+                className="h-14 me-6"
                 alt="Silicon University"
               />
             </a>
-            <address className="not-italic leading-6 mb-4 text-sm lg:text-lg font-semibold">
+            {/* <address className="not-italic leading-6 mb-4 text-sm lg:text-lg font-semibold">
               Silicon University, <br />
-              Silicon Hills, Patia, <br />
+              Silicon Hills, Patia <br />
               Bhubaneswar- 751024 <br />
               Odisha, India.
-            </address>
+            </address> */}
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
